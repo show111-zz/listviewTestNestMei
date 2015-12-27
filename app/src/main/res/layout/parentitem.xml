@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/select7"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/jiangexian" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp" >
+
+        <ImageView
+            android:id="@+id/child_item_img"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/child_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/child_item_img"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/child_item_img"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:textColor="#666666"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_tuan"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@id/child_item_title"
+            android:src="@drawable/tuan" />
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@id/iv_tuan"
+            android:src="@drawable/quan" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/child_item_img"
+            android:layout_toRightOf="@+id/child_item_img"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RatingBar
+                android:id="@+id/rb_xing"
+                style="@style/myratingbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:rating="5"
+                android:stepSize="1" />
+
+            <TextView
+                android:id="@+id/child_item_price_old"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text="5.0分"
+                android:textColor="#FF8400"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/child_item_price_score"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="999"
+                android:ellipsize="end"
+                android:gravity="left"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text="(141人)"
+                android:textColor="@color/textcolor_lightgray"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#e8e8e8" />
+
+    <com.example.lihf.listviewtestnestmei.ChildLiistView
+        android:id="@+id/parent_lv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="#e8e8e8"
+        android:dividerHeight="1dp"
+        android:fadingEdge="none"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none"
+        android:scrollingCache="false" >
+    </com.example.lihf.listviewtestnestmei.ChildLiistView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#e8e8e8" />
+
+    <Button
+        android:id="@+id/bt_jz"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/select7"
+        android:text="查看更多优惠"
+        android:textColor="#2fb8ad" />
+
+</LinearLayout>
